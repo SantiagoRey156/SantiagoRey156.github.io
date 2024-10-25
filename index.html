@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transtorno de bipolaridad
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="multi\favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="title">
+            <img src="multi\icono.png" class="logo">
+            <p>Transtorno de Bipolaridad</p>
+        </div>
+        <div class="buttons">
+            <button class="tooltip" onclick="ShowHideG()">
+                <img src="multi\guion.png" width="35px">
+                <span class="tooltiptext">Guión</span>
+            </button>
+            <button class="tooltip menu" onclick="ShowHideMenu()" id="menu">
+                <img src="multi\menu.png" width="35px">
+                <span class="tooltiptext">Abrir/cerrar menu</span>
+            </button>
+            <button class="tooltip">
+                <img src="multi\share.png" width="35px">
+                <span class="tooltiptext">Compartir</span>
+            </button>
+        </div>
+
+    </header>
+    <main>
+        <section class="list">
+            <div class="boton" onclick="ShowHideMenu()">
+                >
+            </div>
+            <div>
+                <details>
+                    <summary id="B_N1" onclick="ShowHideN1();">Nivel 1</summary>
+                    <button id="B_N1L1" onclick="ShowHideN1L1()"><img src="multi\video.png" width="35px" height="35px" >Lección 1</button>
+                    <button id="B_N1L2" onclick="ShowHideN1L2()"><img src="multi\infograma.png" width="28px" height="35px">Lección 2</button>
+                    <button id="B_N1L3" onclick="ShowHideN1L3()"><img src="multi\mapa.png" width="35px" height="35px">Lección 3</button>
+                    <button id="B_N1L4" onclick="ShowHideN1L4()"><img src="multi\pdf.png" width="28px" height="35px">Lección 4</button>
+                    <button id="B_Q1" onclick="ShowHideQ1()"><img src="multi\quiz.png" width="28px" height="35px">Quiz 1</button>
+                </details>
+                <details>
+                    <summary id="B_N2" onclick="ShowHideN2()">Nivel 2</summary>
+                    <button id="B_N2-L1" onclick="ShowHideN2L1()"><img src="multi\pdf.png" width="28px" height="35px">Lección 1</button>
+                    <button id="B_N2-L2" onclick="ShowHideN2L2()"><img src="multi\pdf.png" width="28px" height="35px">Lección 2</button>
+                    <button id="B_N2-L3" onclick="ShowHideN2L3()"><img src="multi\pdf.png" width="28px" height="35px">Lección 3</button>                
+                    <button id="B_Q2" onclick="ShowHideQ2()"><img src="multi\quiz.png" width="28px" height="35px">Quiz 2</button>
+                </details>
+                    <button id="B_N3" onclick="ShowHideN3()">Nivel 3</button>
+                    <button id="BE" onclick="ShowHideEv()"><img src="multi\evaluacion.png" width="25px" height="30px">Evaluación</button>
+            </section>
+            </div>
+            
+        <section class="content">
+            <div id="I">
+                <h2>Introducción</h2>
+                <p>Bienvenido! <br>
+                Aqui te enseñaremos que es el <b>Trastorno Bipolar. </b></p>
+                <hr>
+            </div>
+
+            <div class="N1 hide" id="N1">
+                <h2>Nivel 1 - Transtorno bipolar</h2>
+                <p>Fomentar en el alumno los conceptos generales sobre el trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L1 hide" id="N1L1">
+                <div class="sub-content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0iazIk1FV7k?si=GPVCAErr-r3lEiPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <h2>Lección 1 - ¿Como se define</h2>
+                <hr>
+                <p>Informar acerca de la definición del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L2 hide" id="N1L2">
+                <div class="sub-content">
+                    <embed src="multi\Sintomas y Causas.jpeg" type="application/pdf" width="70%" height="500px">
+                </div>
+                
+                <h2>Lección 2 - Sintomas y causas</h2>
+                <hr>
+                <p>Informar y presentar los síntomas y causas por las que una persona puede padecer del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L3 hide" id="N1L3">
+                <div class="sub-content">
+                    <img src="multi\Tratamientos.jpeg" alt="Imagén no encontrada" width="98%">
+                </div>
+                
+                <h2>Lección 3 - Tratamientos</h2>
+                <hr>
+                <p>Informar y presentar los tratamientos que existen para tratar a un paciente con trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L4 hide" id="N1L4">
+                <div class="sub-content">
+                    <embed src="multi\Leyes.pdf" type="application/pdf" width="70%" height="500px">
+                </div>
+                <h2>Lección 4 - Leyes</h2>
+                <hr>
+                <p>Informar y presentar a los estudiantes las leyes que existen para proteger a un paciente con trastorno bipolar en el país.</p>
+                <hr>
+            </div>
+            <div class="N1 Q1 hide" id="Q1">
+                <h2>Quiz I</h2>
+                <hr>
+                <div class="sub-content">
+                    <iframe src="https://view.genially.com/670d795c6da40d07759b0847/interactive-content-juego-pistas-secretas" frameborder="0" width="90%" height="600px"></iframe>
+                </div>
+            </div>
+
+            <div class="N2 hide" id="N2">
+                <h2>Nivel 2 - Tipos de Transtorno bipolar</h2>
+                <p>Lograr que el estudiante reconozca los tres tipos de trastorno bipolar que existen.</p>
+                <hr>
+            </div>
+            <div class="N2 N2-L1 hide" id="N2L1">
+                <div class="sub-content">
+                    <embed src="multi\Tipo I.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+                <h2>Lección 1 - Tipo 1</h2>
+                <hr>
+                <p>Informar sobre el tipo 1 del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N2 N2-L2 hide" id="N2L2">
+                <div class="sub-content">
+                    <embed src="multi\Tipo II.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+                <h2>Lección 2 - Tipo 2</h2>
+                <hr>
+                <p>Informar sobre el tipo 2 del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N2 N2-L3 hide" id="N2L3">
+                <div class="sub-content">
+                    <embed src="multi\Tipo III.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+                <h2>Lección 3 - Trastorno ciclotímico</h2>
+                <hr>
+                <p>Informar sobre el trastorno ciclotímico, el cual hace parte de un tipo de trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N2 Q1 hide" id="Q2">
+                <h2>Quiz II</h2>
+                <hr>
+                <div class="sub-content">
+                    <iframe src="https://view.genially.com/66f5b191b39d4ffd805676e5/interactive-content-escape-room-genial" frameborder="0" width="90%" height="600px"></iframe>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+            <div class="N3 hide" id="N3">
+                <h2>Nivel 3 - Actividades de refuerzo</h2>
+                <hr>
+                <section>
+                    <article>
+                        <button><img src="multi\sopa.png" width="175px"><h3>Sopa de Letras</h3></button>
+                    </article>
+                    <article>
+                        <button><img src="multi\sopa.png" width="175px"><h3>Crucigrama</h3></button>
+                    </article>
+                    <article>
+                        <button><img src="multi\sopa.png" width="175px"><h3>Completar frase</h3></button>
+                    </article>
+                </section>
+                <hr>
+            </div>
+            <div class="Ev hide" id="Ev">
+                <h2>Evaluación</h2>
+                <hr>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque asperiores autem odit odio nostrum, delectus accusantium labore amet similique deserunt a nobis officia nulla sit, officiis dicta molestiae, omnis optio.</p>
+                <hr>
+            </div>
+            <div class="sub-content hide" id="Guion">
+                <embed src="multi\Guión.pdf" type="application/pdf" width="90%" height="800px">
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

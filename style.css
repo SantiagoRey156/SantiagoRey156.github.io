@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 3s;
+}
+body {
+    background-color: rgba(95, 158, 160, 0.2);
+}
+header {
+    background-color: rgb(93, 139, 155);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 17vh;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    border-bottom: 2px solid rgb(81, 111, 121);
+}
+header .title {
+    display:  flex;
+    justify-content: left;
+    align-items: center;
+    width: 75%;
+}
+header .title p {
+    font-size: 50px;
+}
+header .logo {
+    background-color: rgba(88, 197, 197, 0.5);
+    width: 6vw;
+    height: 6vw;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    border: 5px white solid;
+    box-shadow: 1px 1px 10px;
+    margin: 10px;
+}
+header button {
+    background-color: rgba(240, 248, 255, 0);
+    border: 0;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px;
+    width: 25%;
+}
+.tooltip:hover {
+    transform: rotate(5deg);
+    transition: 0.1s;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: #ffffff;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    right: -25%;
+    opacity: 0;
+    transition: 0.3s;
+    transform: rotate(-5deg);
+}
+.tooltip .tooltiptext::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    transform: rotate(180deg);
+}
+.tooltip:hover .tooltiptext {
+    background-color: rgba(0, 0, 0, 0.788);
+    transition: 2s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+main {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+.list-Hide {
+    margin-left: 10xp;
+    position: absolute;
+    left: -25%;
+    width: 25%;
+    transition: 2s;
+    margin-right: 5px;
+}
+.list {
+    background-color: white;
+    margin-left: 10xp;
+    position: relative;
+    left: 0;
+    width: 25%;
+    transition: 2s;
+    visibility: visible;
+}
+.list details, .list button, .list-Hide details, .list-Hide button {
+    display: flex;
+    justify-content: flex-start;
+    background-color:  rgb(112, 136, 165);
+    padding: 15px;
+    border-bottom: 2px solid rgba(93, 120, 155, 0.733);
+    margin:  1px 0 1px 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    font-weight: lighter;
+    font-size: 18px;
+    opacity: 0.9;
+}
+.list details button, .list-Hide details button {
+    background-color:  rgba(162, 181, 204, 0.418);
+    border: 0;
+    padding: 10px;
+    margin:  1px 0 1px 30px;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.list button, .list-Hide button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.list img, .list-Hide img {
+    margin: 5px;
+}
+.list details:hover, .list button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 10px rgb(77, 110, 148);
+    color: rgb(0, 0, 0);
+    color: white;
+}
+.list details button:hover {
+    background-color:  rgba(72, 101, 134, 0.295);
+    transform: scale(1.1);
+    color: white;
+}
+.boton {
+    display: none;
+}
+
+
+
+.content {
+    margin-left: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+}
+.sub-content {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.hide {
+    display: none;
+}
+hr {
+    margin: 5px 0 5px 0;
+}
+p {
+    font-size:  15px;
+}
+.content .N1-L2 img{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.N3 section {
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.N3 button {
+    width:  400px;
+    height: 120px;
+    border-radius: 45px;
+    background-color: rgb(162, 181, 204);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.N3 img {
+    position: absolute;
+    opacity: 0.3;
+}
+.N3 button:hover {
+    transform: scale(1.2);
+    transition: 600ms;
+    background-color: rgb(109, 212, 126);
+    border-radius: 40px;
+    color: white;
+    font-size: 20px;
+}
+@media screen and (max-width: 961px) {
+    header .title {
+        display:  flex;
+        justify-content: left;
+        align-items: center;
+        width: 75%;
+    }
+    header .title p {
+        font-size: 35px;
+    }
+    .buttons {
+        margin: 0 10px;
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .list {
+        z-index: 1;
+    }
+  }
+  @media screen and (max-width: 732px) {
+    header .title {
+        display:  flex;
+        justify-content: left;
+        align-items: center;
+        width: 75%;
+    }
+    header .title p {
+        font-size: 35px;
+    }
+    .buttons {
+        margin: 0 10px;
+        width: 25%;
+    }
+    .list {
+        position: absolute;
+        margin-left: 10xp;
+        left: -25%;
+        width: 25%;
+        transition: 2s;
+        margin-right: 5px;
+    }
+    .list-Hide {
+        position: absolute
+        ;
+        background-color: white;
+        margin-left: 10xp;
+        position: absolute;
+        left: 0;
+        width: 25%;
+        transition: 2s;
+        visibility: visible;
+        opacity: 0.9;
+    }
+    .boton {
+        display: block;
+        position: absolute;
+        left: 94%;
+        top: 2%;
+        background-color: rgba(93, 120, 155, 0.733);
+        padding: 5px 10px;
+        border-radius: 10px;
+        display: flex;
+        width: 20%;
+        justify-content: flex-end;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+    .boton:hover {
+        transform: translate(5px);
+        background-color: rgba(93, 120, 155, 0.884);
+    }
+    
+  }
+  @media screen and (max-width: 590px) {
+    header .title {
+        display:  flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+    }
+    header .title p {
+        font-size: 35px;
+    }
+    .buttons {
+        display: none;
+    }
+    .list {
+        position: absolute;
+        margin-left: 10xp;
+        left: -25%;
+        width: 25%;
+        transition: 2s;
+        margin-right: 5px;
+    }
+    .list-Hide {
+        position: absolute;
+        background-color: white;
+        margin-left: 10xp;
+        position: absolute;
+        left: 0;
+        width: 25%;
+        transition: 2s;
+        visibility: visible;
+        opacity: 0.9;
+    }
+    .list details button, .list-Hide details button {
+        margin:  0;
+        width: 98%;
+        font-size: 15px;
+    }
+    .list summary {
+        font-size: 18px;
+    }
+    .boton {
+        display: block;
+        position: absolute;
+        left: 94%;
+        top: 2%;
+        background-color: rgba(93, 120, 155, 0.733);
+        padding: 5px 10px;
+        border-radius: 10px;
+        display: flex;
+        width: 20%;
+        justify-content: flex-end;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+    .boton:hover {
+        transform: translate(5px);
+        background-color: rgba(93, 120, 155, 0.884);
+    }
+  }
