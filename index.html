@@ -26,7 +26,7 @@
                 <img src="multi\menu.png" width="35px">
                 <span class="tooltiptext">Abrir/cerrar menu</span>
             </button>
-            <button class="tooltip">
+            <button class="tooltip" onclick="Mostrar()">
                 <img src="multi\share.png" width="35px">
                 <span class="tooltiptext">Compartir</span>
             </button>
@@ -189,6 +189,16 @@
             </div>
         </section>
     </main>
+    <div class="modal" id="modal" onclick="">
+        <div class="modal-content">
+            <h2>Comparte este OVA</h2>
+            <div class="copy">
+                <input type="text" id="URL" value="https://santiagorey156.github.io/" id="Input"></input>
+                <button onclick="copyURL()">Copiar</button>
+            </div>
+            <button onclick="Ocultar()" class="close">Ok</button>
+        </div>
+    </div>
 
 </body>
 </html>

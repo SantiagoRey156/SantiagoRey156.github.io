@@ -246,3 +246,18 @@ function ShowHideMenu () {
         lista.className = "list-Hide";
     }
 }
+function myFunction() {
+    var element = document.getElementById("boton");
+    element.classList.toggle("boton-active");
+ }
+ function Mostrar () {
+    var modal = document.getElementById("modal");
+    modal.style.display = "block";
+ }
+ function Ocultar () {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+ }
+ function copyURL() {
+    navigator.clipboard.writeText("https://santiagorey156.github.io/")
+}

@@ -363,3 +363,51 @@ p {
         background-color: rgba(93, 120, 155, 0.884);
     }
   }
+
+  
+.share {
+    cursor: pointer;
+}
+.modal {
+    display: none;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px auto;
+    width: 70%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    height: 25vh;
+    z-index: 1;
+}
+.close, .copy button {
+    width: 15%;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid rgba(153, 153, 153, 0.521);
+    cursor: pointer;
+}
+.modal-content .copy {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.modal-content input {
+    width: 70%;
+}
+.close {
+    margin: 5px;
+}
