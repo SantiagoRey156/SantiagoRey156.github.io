@@ -261,3 +261,31 @@ function myFunction() {
  function copyURL() {
     navigator.clipboard.writeText("https://santiagorey156.github.io/")
 }
+function back () {
+    document.getElementById("N3-content").style.display = "none"
+    document.getElementById("N3-buttons").style.display = "block"
+    document.getElementById("N3-1").style.display = "none"
+    document.getElementById("N3-2").style.display = "none"
+    document.getElementById("N3-3").style.display = "none"
+}
+function MostrarA1 () {
+    document.getElementById("N3-content").style.display = "block"
+    document.getElementById("N3-buttons").style.display = "none"
+    document.getElementById("N3-1").style.display = "block"
+    document.getElementById("N3-2").style.display = "none"
+    document.getElementById("N3-3").style.display = "none"
+}
+function MostrarA2 () {
+    document.getElementById("N3-content").style.display = "block"
+    document.getElementById("N3-buttons").style.display = "none"
+    document.getElementById("N3-1").style.display = "none"
+    document.getElementById("N3-2").style.display = "block"
+    document.getElementById("N3-3").style.display = "none"
+}
+function MostrarA3 () {
+    document.getElementById("N3-content").style.display = "block"
+    document.getElementById("N3-buttons").style.display = "none"
+    document.getElementById("N3-1").style.display = "none"
+    document.getElementById("N3-2").style.display = "none"
+    document.getElementById("N3-3").style.display = "block"
+}
