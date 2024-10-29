@@ -165,23 +165,36 @@
             <div class="N3 hide" id="N3">
                 <h2>Nivel 3 - Actividades de refuerzo</h2>
                 <hr>
-                <section>
+                <section class="N3-buttons" id="N3-buttons">
                     <article>
-                        <button><img src="multi\sopa.png" width="175px"><h3>Sopa de Letras</h3></button>
+                        <button onclick="MostrarA1()"><img src="multi\sopa.png" width="175px"><h3>Sopa de Letras</h3></button>
                     </article>
                     <article>
-                        <button><img src="multi\sopa.png" width="175px"><h3>Crucigrama</h3></button>
+                        <button onclick="MostrarA2()"><img src="multi\sopa.png" width="175px"><h3>Juego de parejas</h3></button>
                     </article>
                     <article>
-                        <button><img src="multi\sopa.png" width="175px"><h3>Completar frase</h3></button>
+                        <button onclick="MostrarA3()"><img src="multi\sopa.png" width="175px"><h3>Completar frase</h3></button>
                     </article>
+                </section>
+                <section class="N3-content hide" id="N3-content">
+                    <button onclick="back()" class="back" id="back">Volver</button>
+                    <article>
+                        <iframe src="https://es.educaplay.com/recursos-educativos/20943439-el_trastorno_bipolar.html" frameborder="1" width="100%" height="1000px" class="hide" id="N3-1"></iframe>
+                    </article>
+                    <article>
+                        <iframe src="https://es.educaplay.com/recursos-educativos/20987876-juego_de_parejas_trastorno_bipolar.html" frameborder="1" width="100%" height="800px" class="hide" id="N3-2"></iframe>
+                    </article>
+                    <article>
+                        <iframe src="" frameborder="1" width="100%" height="800px" class="e" id="N3-3"></iframe>
+                    </article>
+
                 </section>
                 <hr>
             </div>
             <div class="Ev hide" id="Ev">
                 <h2>Evaluación</h2>
                 <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque asperiores autem odit odio nostrum, delectus accusantium labore amet similique deserunt a nobis officia nulla sit, officiis dicta molestiae, omnis optio.</p>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9SefXbmP6yyTS3apYi4dPC5KTFE8wfD4J6VHthQLPdrTF2w/viewform" frameborder="0" width="100%" height="800px"></iframe>
                 <hr>
             </div>
             <div class="sub-content hide" id="Guion">
