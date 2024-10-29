@@ -1,413 +1,217 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: 3s;
-}
-body {
-    background-color: rgba(95, 158, 160, 0.2);
-}
-header {
-    background-color: rgb(93, 139, 155);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 17vh;
-    color: white;
-    text-shadow: 2px 2px 10px black;
-    border-bottom: 2px solid rgb(81, 111, 121);
-}
-header .title {
-    display:  flex;
-    justify-content: left;
-    align-items: center;
-    width: 75%;
-}
-header .title p {
-    font-size: 50px;
-}
-header .logo {
-    background-color: rgba(88, 197, 197, 0.5);
-    width: 6vw;
-    height: 6vw;
-    min-width: 100px;
-    min-height: 100px;
-    border-radius: 50%;
-    border: 5px white solid;
-    box-shadow: 1px 1px 10px;
-    margin: 10px;
-}
-header button {
-    background-color: rgba(240, 248, 255, 0);
-    border: 0;
-    cursor: pointer;
-    padding: 5px;
-    margin: 5px;
-}
-.buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 10px;
-    width: 25%;
-}
-.tooltip:hover {
-    transform: rotate(5deg);
-    transition: 0.1s;
-}
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: auto;
-    background-color: #ffffff;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    top: 110%;
-    right: -25%;
-    opacity: 0;
-    transition: 0.3s;
-    transform: rotate(-5deg);
-}
-.tooltip .tooltiptext::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-    transform: rotate(180deg);
-}
-.tooltip:hover .tooltiptext {
-    background-color: rgba(0, 0, 0, 0.788);
-    transition: 2s;
-    visibility: visible;
-    opacity: 1;
-}
-
-
-main {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-}
-.list-Hide {
-    margin-left: 10xp;
-    position: absolute;
-    left: -25%;
-    width: 25%;
-    transition: 2s;
-    margin-right: 5px;
-}
-.list {
-    background-color: white;
-    margin-left: 10xp;
-    position: relative;
-    left: 0;
-    width: 25%;
-    transition: 2s;
-    visibility: visible;
-}
-.list details, .list button, .list-Hide details, .list-Hide button {
-    display: flex;
-    justify-content: flex-start;
-    background-color:  rgb(112, 136, 165);
-    padding: 15px;
-    border-bottom: 2px solid rgba(93, 120, 155, 0.733);
-    margin:  1px 0 1px 0;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-    width: 100%;
-    border: 0;
-    font-weight: lighter;
-    font-size: 18px;
-    opacity: 0.9;
-}
-.list details button, .list-Hide details button {
-    background-color:  rgba(162, 181, 204, 0.418);
-    border: 0;
-    padding: 10px;
-    margin:  1px 0 1px 30px;
-    width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-}
-.list button, .list-Hide button {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-}
-.list img, .list-Hide img {
-    margin: 5px;
-}
-.list details:hover, .list button:hover {
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 1px 1px 5px black;
-    text-shadow: 1px 1px 10px rgb(77, 110, 148);
-    color: rgb(0, 0, 0);
-    color: white;
-}
-.list details button:hover {
-    background-color:  rgba(72, 101, 134, 0.295);
-    transform: scale(1.1);
-    color: white;
-}
-.boton {
-    display: none;
-}
-
-
-
-.content {
-    margin-left: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 100%;
-}
-.sub-content {
-    display:  flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1px;
-    width: 100%;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-.hide {
-    display: none;
-}
-hr {
-    margin: 5px 0 5px 0;
-}
-p {
-    font-size:  15px;
-}
-.content .N1-L2 img{
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-.N3 section {
-    display:  flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.N3 button {
-    width:  400px;
-    height: 120px;
-    border-radius: 45px;
-    background-color: rgb(162, 181, 204);
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-}
-.N3 img {
-    position: absolute;
-    opacity: 0.3;
-}
-.N3 button:hover {
-    transform: scale(1.2);
-    transition: 600ms;
-    background-color: rgb(109, 212, 126);
-    border-radius: 40px;
-    color: white;
-    font-size: 20px;
-}
-@media screen and (max-width: 961px) {
-    header .title {
-        display:  flex;
-        justify-content: left;
-        align-items: center;
-        width: 75%;
-    }
-    header .title p {
-        font-size: 35px;
-    }
-    .buttons {
-        margin: 0 10px;
-        width: 25%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .list {
-        z-index: 1;
-    }
-  }
-  @media screen and (max-width: 732px) {
-    header .title {
-        display:  flex;
-        justify-content: left;
-        align-items: center;
-        width: 75%;
-    }
-    header .title p {
-        font-size: 35px;
-    }
-    .buttons {
-        margin: 0 10px;
-        width: 25%;
-    }
-    .list {
-        position: absolute;
-        margin-left: 10xp;
-        left: -25%;
-        width: 25%;
-        transition: 2s;
-        margin-right: 5px;
-    }
-    .list-Hide {
-        position: absolute
-        ;
-        background-color: white;
-        margin-left: 10xp;
-        position: absolute;
-        left: 0;
-        width: 25%;
-        transition: 2s;
-        visibility: visible;
-        opacity: 0.9;
-    }
-    .boton {
-        display: block;
-        position: absolute;
-        left: 94%;
-        top: 2%;
-        background-color: rgba(93, 120, 155, 0.733);
-        padding: 5px 10px;
-        border-radius: 10px;
-        display: flex;
-        width: 20%;
-        justify-content: flex-end;
-        cursor: pointer;
-        z-index: 1;
-        opacity: 0.7;
-        font-weight: bold;
-    }
-    .boton:hover {
-        transform: translate(5px);
-        background-color: rgba(93, 120, 155, 0.884);
-    }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transtorno de bipolaridad
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="multi\favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="app.js"></script>
+</head>
+<body>
     
-  }
-  @media screen and (max-width: 590px) {
-    header .title {
-        display:  flex;
-        justify-content: left;
-        align-items: center;
-        width: 100%;
-    }
-    header .title p {
-        font-size: 35px;
-    }
-    .buttons {
-        display: none;
-    }
-    .list {
-        position: absolute;
-        margin-left: 10xp;
-        left: -25%;
-        width: 25%;
-        transition: 2s;
-        margin-right: 5px;
-    }
-    .list-Hide {
-        position: absolute;
-        background-color: white;
-        margin-left: 10xp;
-        position: absolute;
-        left: 0;
-        width: 25%;
-        transition: 2s;
-        visibility: visible;
-        opacity: 0.9;
-    }
-    .list details button, .list-Hide details button {
-        margin:  0;
-        width: 98%;
-        font-size: 15px;
-    }
-    .list summary {
-        font-size: 18px;
-    }
-    .boton {
-        display: block;
-        position: absolute;
-        left: 94%;
-        top: 2%;
-        background-color: rgba(93, 120, 155, 0.733);
-        padding: 5px 10px;
-        border-radius: 10px;
-        display: flex;
-        width: 20%;
-        justify-content: flex-end;
-        cursor: pointer;
-        z-index: 1;
-        opacity: 0.7;
-        font-weight: bold;
-    }
-    .boton:hover {
-        transform: translate(5px);
-        background-color: rgba(93, 120, 155, 0.884);
-    }
-  }
+    <header>
+        <div class="title">
+            <img src="multi\icono.png" class="logo">
+            <p>Transtorno de Bipolaridad</p>
+        </div>
+        <div class="buttons">
+            <button class="tooltip" onclick="ShowHideG()">
+                <img src="multi\guion.png" width="35px">
+                <span class="tooltiptext">Guión</span>
+            </button>
+            <button class="tooltip menu" onclick="ShowHideMenu()" id="menu">
+                <img src="multi\menu.png" width="35px">
+                <span class="tooltiptext">Abrir/cerrar menu</span>
+            </button>
+            <button class="tooltip" onclick="Mostrar()">
+                <img src="multi\share.png" width="35px">
+                <span class="tooltiptext">Compartir</span>
+            </button>
+        </div>
 
-  
-.share {
-    cursor: pointer;
-}
-.modal {
-    display: none;
-    margin: auto;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid black;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.modal-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 100px auto;
-    width: 70%;
-    background-color: white;
-    padding: 10px;
-    border-radius: 15px;
-    height: 25vh;
-    z-index: 1;
-}
-.close, .copy button {
-    width: 15%;
-    padding: 10px;
-    background-color: aliceblue;
-    border: 1px solid rgba(153, 153, 153, 0.521);
-    cursor: pointer;
-}
-.modal-content .copy {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-}
-.modal-content input {
-    width: 70%;
-}
-.close {
-    margin: 5px;
-}
+    </header>
+    <main>
+        <section class="list">
+            <div class="boton" onclick="ShowHideMenu()">
+                >
+            </div>
+            <div>
+                <details>
+                    <summary id="B_N1" onclick="ShowHideN1();">Nivel 1</summary>
+                    <button id="B_N1L1" onclick="ShowHideN1L1()"><img src="multi\video.png" width="35px" height="35px" >Lección 1</button>
+                    <button id="B_N1L2" onclick="ShowHideN1L2()"><img src="multi\infograma.png" width="28px" height="35px">Lección 2</button>
+                    <button id="B_N1L3" onclick="ShowHideN1L3()"><img src="multi\mapa.png" width="35px" height="35px">Lección 3</button>
+                    <button id="B_N1L4" onclick="ShowHideN1L4()"><img src="multi\pdf.png" width="28px" height="35px">Lección 4</button>
+                    <button id="B_Q1" onclick="ShowHideQ1()"><img src="multi\quiz.png" width="28px" height="35px">Quiz 1</button>
+                </details>
+                <details>
+                    <summary id="B_N2" onclick="ShowHideN2()">Nivel 2</summary>
+                    <button id="B_N2-L1" onclick="ShowHideN2L1()"><img src="multi\pdf.png" width="28px" height="35px">Lección 1</button>
+                    <button id="B_N2-L2" onclick="ShowHideN2L2()"><img src="multi\pdf.png" width="28px" height="35px">Lección 2</button>
+                    <button id="B_N2-L3" onclick="ShowHideN2L3()"><img src="multi\pdf.png" width="28px" height="35px">Lección 3</button>                
+                    <button id="B_Q2" onclick="ShowHideQ2()"><img src="multi\quiz.png" width="28px" height="35px">Quiz 2</button>
+                </details>
+                    <button id="B_N3" onclick="ShowHideN3()">Nivel 3</button>
+                    <button id="BE" onclick="ShowHideEv()"><img src="multi\evaluacion.png" width="25px" height="30px">Evaluación</button>
+            </section>
+            </div>
+            
+        <section class="content">
+            <div id="I">
+                <h2>Introducción</h2>
+                <p>Bienvenido! <br>
+                Aqui te enseñaremos que es el <b>Trastorno Bipolar. </b></p>
+                <hr>
+            </div>
+
+            <div class="N1 hide" id="N1">
+                <h2>Nivel 1 - Transtorno bipolar</h2>
+                <p>Fomentar en el alumno los conceptos generales sobre el trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L1 hide" id="N1L1">
+                <div class="sub-content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0iazIk1FV7k?si=GPVCAErr-r3lEiPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <h2>Lección 1 - ¿Como se define</h2>
+                <hr>
+                <p>Informar acerca de la definición del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L2 hide" id="N1L2">
+                <div class="sub-content">
+                    <embed src="multi\Sintomas y Causas.jpeg" type="application/pdf" width="70%" height="500px">
+                </div>
+                
+                <h2>Lección 2 - Sintomas y causas</h2>
+                <hr>
+                <p>Informar y presentar los síntomas y causas por las que una persona puede padecer del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L3 hide" id="N1L3">
+                <div class="sub-content">
+                    <img src="multi\Tratamientos.jpeg" alt="Imagén no encontrada" width="98%">
+                </div>
+                
+                <h2>Lección 3 - Tratamientos</h2>
+                <hr>
+                <p>Informar y presentar los tratamientos que existen para tratar a un paciente con trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N1 N1-L4 hide" id="N1L4">
+                <div class="sub-content">
+                    <embed src="multi\Leyes.pdf" type="application/pdf" width="70%" height="500px">
+                </div>
+                <h2>Lección 4 - Leyes</h2>
+                <hr>
+                <p>Informar y presentar a los estudiantes las leyes que existen para proteger a un paciente con trastorno bipolar en el país.</p>
+                <hr>
+            </div>
+            <div class="N1 Q1 hide" id="Q1">
+                <h2>Quiz I</h2>
+                <hr>
+                <div class="sub-content">
+                    <iframe src="https://view.genially.com/670d795c6da40d07759b0847/interactive-content-juego-pistas-secretas" frameborder="0" width="90%" height="600px"></iframe>
+                </div>
+            </div>
+
+            <div class="N2 hide" id="N2">
+                <h2>Nivel 2 - Tipos de Transtorno bipolar</h2>
+                <p>Lograr que el estudiante reconozca los tres tipos de trastorno bipolar que existen.</p>
+                <hr>
+            </div>
+            <div class="N2 N2-L1 hide" id="N2L1">
+                <div class="sub-content">
+                    <embed src="multi\Tipo I.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+                <h2>Lección 1 - Tipo 1</h2>
+                <hr>
+                <p>Informar sobre el tipo 1 del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N2 N2-L2 hide" id="N2L2">
+                <div class="sub-content">
+                    <embed src="multi\Tipo II.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+                <h2>Lección 2 - Tipo 2</h2>
+                <hr>
+                <p>Informar sobre el tipo 2 del trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N2 N2-L3 hide" id="N2L3">
+                <div class="sub-content">
+                    <embed src="multi\Tipo III.pdf" type="application/pdf" width="100%" height="500px">
+                </div>
+                <h2>Lección 3 - Trastorno ciclotímico</h2>
+                <hr>
+                <p>Informar sobre el trastorno ciclotímico, el cual hace parte de un tipo de trastorno bipolar.</p>
+                <hr>
+            </div>
+            <div class="N2 Q1 hide" id="Q2">
+                <h2>Quiz II</h2>
+                <hr>
+                <div class="sub-content">
+                    <iframe src="https://view.genially.com/66f5b191b39d4ffd805676e5/interactive-content-escape-room-genial" frameborder="0" width="90%" height="600px"></iframe>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+            <div class="N3 hide" id="N3">
+                <h2>Nivel 3 - Actividades de refuerzo</h2>
+                <hr>
+                <section class="N3-buttons" id="N3-buttons">
+                    <article>
+                        <button onclick="MostrarA1()"><img src="multi\sopa.png" width="175px"><h3>Sopa de Letras</h3></button>
+                    </article>
+                    <article>
+                        <button onclick="MostrarA2()"><img src="multi\sopa.png" width="175px"><h3>Juego de parejas</h3></button>
+                    </article>
+                    <article>
+                        <button onclick="MostrarA3()"><img src="multi\sopa.png" width="175px"><h3>Completar frase</h3></button>
+                    </article>
+                </section>
+                <section class="N3-content hide" id="N3-content">
+                    <button onclick="back()" class="back" id="back">Volver</button>
+                    <article>
+                        <iframe src="https://es.educaplay.com/recursos-educativos/20943439-el_trastorno_bipolar.html" frameborder="1" width="100%" height="1000px" class="hide" id="N3-1"></iframe>
+                    </article>
+                    <article>
+                        <iframe src="https://es.educaplay.com/recursos-educativos/20987876-juego_de_parejas_trastorno_bipolar.html" frameborder="1" width="100%" height="800px" class="hide" id="N3-2"></iframe>
+                    </article>
+                    <article>
+                        <iframe src="" frameborder="1" width="100%" height="800px" class="e" id="N3-3"></iframe>
+                    </article>
+
+                </section>
+                <hr>
+            </div>
+            <div class="Ev hide" id="Ev">
+                <h2>Evaluación</h2>
+                <hr>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9SefXbmP6yyTS3apYi4dPC5KTFE8wfD4J6VHthQLPdrTF2w/viewform" frameborder="0" width="100%" height="800px"></iframe>
+                <hr>
+            </div>
+            <div class="sub-content hide" id="Guion">
+                <embed src="multi\Guión.pdf" type="application/pdf" width="90%" height="800px">
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="modal" onclick="">
+        <div class="modal-content">
+            <h2>Comparte este OVA</h2>
+            <div class="copy">
+                <input type="text" id="URL" value="https://santiagorey156.github.io/" id="Input"></input>
+                <button onclick="copyURL()">Copiar</button>
+            </div>
+            <button onclick="Ocultar()" class="close">Ok</button>
+        </div>
+    </div>
+
+</body>
+</html>
